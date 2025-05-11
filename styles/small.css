@@ -1,0 +1,209 @@
+:root {
+  --main-color: #23047f;
+  --secondary-color: #83e9fb;
+}
+
+/* *************************Title bar*********************** */
+
+.name {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4rem;
+  margin: 1rem 2rem;
+}
+
+.title-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--secondary-color);
+}
+
+.title-bar img {
+  width: 200px;
+  margin: 2rem;
+  border-radius: 18px;
+}
+
+/* ************************responsive nav************************ */
+nav {
+    min-height: 4rem;
+    background-color: var(--main-color);
+    padding: 2rem;
+    align-content: center;
+    display: none;
+  }
+  
+nav img {
+  max-width: 75px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+  
+/* small view navigation */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+      position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+  color: var(--main-color);
+  font-size: 2.5rem;
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 1rem;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "🔷";  /* wayfinding symbol for the user */
+}
+
+/* ************************Main************************ */
+
+h1 {
+  margin-left: 1rem;
+}
+
+h2 {
+  background-color: #23047f;
+  color: #fff;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.card {
+  box-shadow: -1px 0px 22px 2px rgba(0,0,0,0.75);
+  margin: 1rem;
+  flex-grow: 1;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-work {
+  min-width: 400px;
+}
+
+.location {
+  max-width: 500px;
+}
+
+.location img {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#location-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.location figcaption {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+li  {
+  padding-top: 1rem;
+}
+
+button {
+  border-radius: 18px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
+  color: black;
+}
+
+.button-filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid gray;
+}
+
+.button-classes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selected {
+  background-color: var(--secondary-color);
+  color: black;
+}
+
+/* ************************footer************************ */
+
+footer {
+  background: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer p {
+  /* padding-left: 1.2rem; */
+  padding-bottom: 0.4rem;
+  color: black;
+  font-size: 1.5rem;
+}
