@@ -65,6 +65,11 @@
     }
 
     /* ************************Main********************** */
+
+    .course-work {
+        min-width: 400px;
+    }
+
     .image-text-zig-zag {
         max-width: 1080px;
         flex-direction: row;
