@@ -190,6 +190,11 @@ button {
   color: black;
 }
 
+#credits {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 /* ************************footer************************ */
 
 footer {

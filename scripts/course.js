@@ -83,7 +83,9 @@ const buttonAll = document.getElementById('all');
 const buttonCES = document.getElementById('ces');
 const buttonWDD = document.getElementById('wdd');
 const divClassButtons = document.querySelector('.button-classes');
+const pCredits = document.getElementById('credits');
 let filterdCourses = [];
+let totalCredits = 0;
 
 
 
@@ -100,6 +102,12 @@ const createCourseButton = course => {
     })
 };
 
+function createCourseButtons(courseList) {
+    courseList.forEach(course => {
+        createCourseButton(course);
+    });
+}
+
 function clearCourseButtons() {
     filterdCourses = [];
     divClassButtons.innerHTML = "";
@@ -109,10 +117,9 @@ buttonAll.addEventListener("click", function () {
     if (!buttonAll.classList.contains('selected')) {
         unselectFilterButtons();
         buttonAll.classList.add('selected');
-        clearCourseButtons()
-        courses.forEach(course => {
-            createCourseButton(course);
-        });
+        clearCourseButtons();
+        createCourseButtons(courses);
+        updateCourseCredits(courses);
     }
 });
 
@@ -121,16 +128,9 @@ buttonCES.addEventListener("click", function () {
         unselectFilterButtons();
         buttonCES.classList.add('selected');
         clearCourseButtons();
-        
-        courses.forEach(course => {
-            if (course.subject === 'CSE') {
-                filterdCourses.push(course);
-            }
-        });
-
-        filterdCourses.forEach(course => {
-            createCourseButton(course);
-        });
+        filterdCourses = courses.filter(course => course.subject === 'CSE');
+        createCourseButtons(filterdCourses);
+        updateCourseCredits(filterdCourses);
     }
 });
 
@@ -138,17 +138,10 @@ buttonWDD.addEventListener("click", function () {
     if (!buttonWDD.classList.contains('selected')) {
         unselectFilterButtons();
         buttonWDD.classList.add('selected');
-        clearCourseButtons()
-        
-        courses.forEach(course => {
-            if (course.subject === 'WDD') {
-                filterdCourses.push(course);
-            }
-        });
-
-        filterdCourses.forEach(course => {
-            createCourseButton(course);
-        });
+        clearCourseButtons();
+        filterdCourses = courses.filter(course => course.subject === 'WDD');
+        createCourseButtons(filterdCourses);
+        updateCourseCredits(filterdCourses);
     }  
 });
 
@@ -158,6 +151,16 @@ function unselectFilterButtons() {
     buttonWDD.classList.remove('selected');
 }
 
+function updateCourseCredits(courseList) {
+    totalCredits = courseList.reduce((accumulator, course) => {
+        return accumulator + course.credits;
+    },0);
+
+    pCredits.textContent = `${totalCredits} total credits for the courses listed below.`;
+}
+
 courses.forEach(course => {
-        createCourseButton(course);
+    createCourseButton(course);
 });
+
+updateCourseCredits(courses);
