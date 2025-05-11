@@ -39,73 +39,10 @@
         flex: 1 1 100%;
 	}
 
-    /* ************************Hero********************** */
-    .hero {
-        position: relative;
-    }
-
-    .hero img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .hero h1 {
-        position: absolute;
-        top: 40px;
-        text-align: center;
-        width: 100%;
-        color: #fff;
-        text-shadow:
-        3px 3px 0 black,
-        -3px 3px 0 black,
-        -3px -3px 0 black,
-        3px -3px 0 black;
-        font-size: 4rem;
-    }
-
     /* ************************Main********************** */
 
     .course-work {
         min-width: 400px;
-    }
-
-    .image-text-zig-zag {
-        max-width: 1080px;
-        flex-direction: row;
-    }
-
-    .image-text-zig-zag p {
-        margin: 0;
-        min-width: 50px;
-    }
-    
-    .zig-zag-img {
-        margin: 1rem 50px 1rem 50px;
-        max-width: 350px;
-      }
-
-    .image-text-pair {
-        display: flex;
-        flex-direction: column;
-      }
-
-    .image-text-pair {
-        display: flex;
-        flex-direction: row;
-    }
-
-    /* ************************newsletter CTA************************ */
-    .newsletter-cta {
-        flex-direction: row;
-    }
-  
-    .newsletter-cta p{
-        max-width: 400px;
-    }
-
-    .newsletter-text {
-        margin: 0;
     }
       
     /* ************************footer************************ */
