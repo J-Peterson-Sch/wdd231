@@ -1,0 +1,53 @@
+:root {
+    --main-color: #23047f;
+}
+
+@media (min-width: 700px){
+
+    .title-bar {
+    flex-direction: row;
+    }
+
+    .name {
+        margin: auto 2rem;
+    }
+
+    /* ************************navbar************************ */
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+        flex-wrap: wrap;
+	}
+
+    nav {
+        padding: 1.5rem;
+        display: block;
+    }
+
+    nav img {
+        max-width: 100px;
+        top: 20px;
+        left: 50px;
+    }
+
+	.navigation a {
+        font-size: 2.5rem;
+        display: block;
+        flex: 1 1 100%;
+	}
+
+    /* ************************Main********************** */
+
+    .course-work {
+        min-width: 400px;
+    }
+      
+    /* ************************footer************************ */
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
