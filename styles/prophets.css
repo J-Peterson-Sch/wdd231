@@ -1,0 +1,39 @@
+:root {
+  --main-color: #23047f;
+  --secondary-color: #83e9fb;
+}
+
+h1, h2 {
+    color: var(--main-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 8px 0;
+}
+
+#cards {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .5rem;
+    margin: .75rem;
+}
+
+#cards section {
+    background-color: var(--secondary-color);
+    border: rgb(160, 160, 160) solid 1px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+}
+
+img {
+    margin: 1rem 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.85);
+}
