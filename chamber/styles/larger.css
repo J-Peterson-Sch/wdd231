@@ -1,5 +1,5 @@
 :root {
-    --main-color: #23047f;
+    --main-color: #c0b9d4;
 }
 
 @media (min-width: 700px){
@@ -17,6 +17,13 @@
 		display: none; /* hide hamburger button */
 	}
 
+    #nav-buttons {
+        grid-column: 2/4;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
 	.navigation {
 		flex-direction: row;
         flex-wrap: wrap;
@@ -24,7 +31,9 @@
 
     nav {
         padding: 1.5rem;
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr, auto;
+        grid-template-rows: 1fr;
     }
 
     nav img {
@@ -33,10 +42,14 @@
         left: 50px;
     }
 
+    nav li {
+        align-self: center;
+    }
+
 	.navigation a {
-        font-size: 2.5rem;
+        font-size: 1rem;
         display: block;
-        flex: 1 1 100%;
+        /* flex: 1 1 100%; */
 	}
 
     /* ************************Main********************** */

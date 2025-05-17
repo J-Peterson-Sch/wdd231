@@ -1,4 +1,5 @@
 const hamButton = document.querySelector('#menu');
+const modeButton = document.querySelector('#mode');
 const navigation = document.querySelector('.navigation');
 const nav = document.querySelector('nav');
 
@@ -6,6 +7,10 @@ hamButton.addEventListener('click', () => {
 navigation.classList.toggle('open');
 hamButton.classList.toggle('open');
 nav.classList.toggle('not-visible');
+});
+
+modeButton.addEventListener('click', () => {
+    
 });
 
 function checkViewportWidth() {
