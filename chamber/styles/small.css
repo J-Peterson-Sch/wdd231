@@ -1,6 +1,6 @@
 :root {
-  --main-color: #bfbace;
-  --secondary-color: #83e9fb;
+  --main-color: #587ab9;
+  --secondary-color: #96c3cb;
 }
 
 * {
@@ -12,7 +12,6 @@
 .not-visible {
   display: none;
 }
-
 /* ************************responsive nav************************ */
 nav {
   min-height: 3rem;
@@ -67,7 +66,6 @@ nav li {
   color: #fff;
 }
 
-/* small view navigation */
 #menu {
   font-size: 1.5rem;
   border: 0;
@@ -169,13 +167,35 @@ nav li {
 }
 
 /* ************************Main************************ */
+h1 {
+  text-align: center;
+}
+
+.grid-toggle {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.grid-toggle button {
+  width: 75px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  color: #fff;
+}
+
 /* ************************Grid************************ */
 #directory-grid {
   display: flex;
-  flex-direction: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+#directory-grid.not-visible {
+  display: none;
 }
 
 .member-card {
@@ -221,6 +241,16 @@ nav li {
     font-size: .9rem;
     margin: 0;
   }
+
+  .card-data {
+    margin: 1rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .member-card img {
+    grid-row: 1/2;
+  }
 }
 
 /* ************************Table*********************** */
@@ -234,7 +264,6 @@ nav li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -242,31 +271,22 @@ table {
     font-size: 16px;
 }
 
-/* Table Header Styling */
 table thead th {
-  background-color: #4CAF50;
-  color: #ffffff;
+  background-color: var(--main-color);
+  color: black;
   text-align: left;
   padding: 12px;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
 }
 
-/* Table Body Styling */
 table tbody td {
   padding: 12px;
   border-bottom: 1px solid #dddddd;
 }
 
-/* Alternating Row Colors */
 table tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-/* Hover Effects */
-table tbody tr:hover {
-  background-color: #e0e0e0;
-}
-
 
 /* ************************footer************************ */
 
@@ -303,3 +323,4 @@ footer p {
   color: black;
   font-size: 1rem;
 }
+

@@ -154,13 +154,13 @@ window.addEventListener('resize', function () {
     console.log('Window was resized')
     viewport = checkViewportWidth();
 
-    const activeView = document.getElementsByClassName('active-view');
+    const activeView = document.querySelector('.active-view');
     if (activeView.id === 'grid-view') {
         displayMemberCards();
     } else if (activeView.id === 'table-view') {
         displayMemberTable(viewport);
     } else {
-        console.log('There was an error deciding between grid and table view', error);
+        console.log('There was an error deciding between grid and table view');
     }
 });
 
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (activeView.id === 'table-view') {
         displayMemberTable(viewport);
     } else {
-        console.log('There was an error deciding between grid and table view', error);
+        console.log('There was an error deciding between grid and table view');
     }
 });
 
