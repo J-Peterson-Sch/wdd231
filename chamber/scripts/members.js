@@ -1,5 +1,9 @@
 'use strict';
 
+function checkViewportWidth() {
+    return window.innerWidth;
+}
+
 async function loadMembers() {
     const response = await fetch('data/members.json');
     return await response.json();
@@ -7,15 +11,17 @@ async function loadMembers() {
 
 function createMemberCard(member) {
     const card = document.createElement('div');
-    card.className = 'member-card';
+    card.classList.add('member-card');
 
     const companyName = document.createElement('h3');
     companyName.textContent = member.name;
 
     const tagline = document.createElement('p');
     tagline.textContent = member.tagline;
+    tagline.classList.add('slogan');
 
     const cardData = document.createElement('div');
+    cardData.classList.add('card-data');
     const address = document.createElement('p');
     const phoneNumber = document.createElement('p');
     const url = document.createElement('p');
@@ -30,9 +36,14 @@ function createMemberCard(member) {
     logo.classList.add('member-logo');
 
     cardData.appendChild(logo);
-    cardData.appendChild(address);
-    cardData.appendChild(phoneNumber);
-    cardData.appendChild(url);
+
+    const companyContact = document.createElement('div');
+    companyContact.classList.add('company-contact');
+
+    companyContact.appendChild(address);
+    companyContact.appendChild(phoneNumber);
+    companyContact.appendChild(url);
+    cardData.appendChild(companyContact);
 
     card.appendChild(companyName);
     card.appendChild(tagline);
@@ -60,7 +71,7 @@ async function displayMemberCards() {
     }
 }
 
-function createMemberListRow(member) {
+function createMemberListRow(member, viewport) {
     const row = document.createElement('tr');
     const companyName = document.createElement('td');
     companyName.textContent = member.name;
@@ -73,21 +84,25 @@ function createMemberListRow(member) {
     phoneNumber.textContent = member.phone;
 
     row.appendChild(companyName);
-    row.appendChild(tagline);
+
+    if (viewport >= sloganMinWidth) {
+        row.appendChild(tagline);
+    }
+    
     row.appendChild(address);
     row.appendChild(phoneNumber);
 
     return row;
 }
 
-async function displayMemberTable() {
+async function displayMemberTable(viewport) {
     
     try {
         const membersList = await loadMembers();
 
         const tableDiv = document.getElementById('directory-table');
         const table = document.createElement('table');
-        table.innerHTML = '';
+        tableDiv.innerHTML = '';
         const tableHead = document.createElement('thead');
 
         const tableHeader = document.createElement('tr');
@@ -101,7 +116,11 @@ async function displayMemberTable() {
         const phoneNumber = document.createElement('th');
         phoneNumber.textContent = 'Phone Number';
         tableHeader.appendChild(companyName);
-        tableHeader.appendChild(tagline);
+
+        if (viewport >= sloganMinWidth) {
+            tableHeader.appendChild(tagline);
+        }
+
         tableHeader.appendChild(address);
         tableHeader.appendChild(phoneNumber);
         tableHead.appendChild(tableHeader);
@@ -111,7 +130,7 @@ async function displayMemberTable() {
 
         // Generate and display table rows
         membersList.forEach(member => {
-            const row = createMemberListRow(member);
+            const row = createMemberListRow(member, viewport);
             body.appendChild(row);
         });
         table.appendChild(body);
@@ -123,4 +142,58 @@ async function displayMemberTable() {
 }
 
 // displayMemberCards();
-displayMemberTable();
+// displayMemberTable();
+let viewport = checkViewportWidth();
+const sloganMinWidth = 550;
+const gridButton = document.getElementById('grid-view');
+const tableButton = document.getElementById('table-view');
+const gridDiv = document.querySelector('#directory-grid');
+const tableDiv = document.querySelector('#directory-table');
+
+window.addEventListener('resize', function () {
+    console.log('Window was resized')
+    viewport = checkViewportWidth();
+
+    const activeView = document.getElementsByClassName('active-view');
+    if (activeView.id === 'grid-view') {
+        displayMemberCards();
+    } else if (activeView.id === 'table-view') {
+        displayMemberTable(viewport);
+    } else {
+        console.log('There was an error deciding between grid and table view', error);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    viewport = checkViewportWidth();
+
+    const activeView = document.querySelector('.active-view');
+    if (activeView.id === 'grid-view') {
+        displayMemberCards();
+    } else if (activeView.id === 'table-view') {
+        displayMemberTable(viewport);
+    } else {
+        console.log('There was an error deciding between grid and table view', error);
+    }
+});
+
+gridButton.addEventListener ('click', function () {
+    if (!gridButton.classList.contains('active-view')) {
+        gridButton.classList.toggle('active-view');
+        tableButton.classList.toggle('active-view');
+        gridDiv.classList.toggle('not-visible');
+        tableDiv.classList.toggle('not-visible');
+        displayMemberCards();
+    }
+});
+
+tableButton.addEventListener ('click', function () {
+    if (!tableButton.classList.contains('active-view')) {
+        tableButton.classList.toggle('active-view');
+        gridButton.classList.toggle('active-view');
+        viewport = checkViewportWidth();
+        tableDiv.classList.toggle('not-visible');
+        gridDiv.classList.toggle('not-visible');
+        displayMemberTable(viewport);
+    }
+});

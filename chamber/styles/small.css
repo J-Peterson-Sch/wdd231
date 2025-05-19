@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+.not-visible {
+  display: none;
+}
+
 /* ************************responsive nav************************ */
 nav {
   min-height: 3rem;
@@ -26,10 +30,6 @@ nav ul {
 
 nav li {
   margin: 0;
-}
-
-.not-visible {
-  display: none;
 }
 
 #text-seal {
@@ -169,7 +169,61 @@ nav li {
 }
 
 /* ************************Main************************ */
-/* ************************Table************************ */
+/* ************************Grid************************ */
+#directory-grid {
+  display: flex;
+  flex-direction: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.member-card {
+  border: solid 1px black;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.member-card h3 {
+  padding: .5rem;
+}
+
+.slogan {
+  margin: 0 1rem 1rem 1rem;
+  padding-bottom: .5rem;
+  border-bottom: solid black 1px;
+}
+
+.card-data {
+  text-align: left;
+  text-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+.member-card img {
+  overflow: hidden;
+  border-radius: 25px;
+  margin: 0 auto 1rem auto;
+  width: 100px;
+  grid-column: 1/2;
+}
+
+.company-contact {
+  margin-left: .8rem;
+}
+
+@media (max-width: 375px){
+  .card-data p {
+    font-size: .9rem;
+    margin: 0;
+  }
+}
+
+/* ************************Table*********************** */
 #directory-table {
     max-width: 100%;
     overflow-x: auto;
