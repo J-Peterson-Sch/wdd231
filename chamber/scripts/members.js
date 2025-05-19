@@ -85,8 +85,10 @@ async function displayMemberTable() {
     try {
         const membersList = await loadMembers();
 
-        const table = document.getElementById('directory-table');
+        const tableDiv = document.getElementById('directory-table');
+        const table = document.createElement('table');
         table.innerHTML = '';
+        const tableHead = document.createElement('thead');
 
         const tableHeader = document.createElement('tr');
         const companyName = document.createElement('th');
@@ -102,13 +104,18 @@ async function displayMemberTable() {
         tableHeader.appendChild(tagline);
         tableHeader.appendChild(address);
         tableHeader.appendChild(phoneNumber);
-        table.appendChild(tableHeader);
+        tableHead.appendChild(tableHeader);
+        table.appendChild(tableHead);
+
+        const body = document.createElement('tbody');
 
         // Generate and display table rows
         membersList.forEach(member => {
             const row = createMemberListRow(member);
-            table.appendChild(row);
+            body.appendChild(row);
         });
+        table.appendChild(body);
+        tableDiv.appendChild(table);
     } 
     catch (error) {
         console.error("An error occurred while displaying members table:", error);

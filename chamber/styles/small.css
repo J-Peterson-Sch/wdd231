@@ -169,7 +169,49 @@ nav li {
 }
 
 /* ************************Main************************ */
+/* ************************Table************************ */
+#directory-table {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Table Header Styling */
+table thead th {
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Table Body Styling */
+table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Alternating Row Colors */
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover Effects */
+table tbody tr:hover {
+  background-color: #e0e0e0;
+}
 
 
 /* ************************footer************************ */
