@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Tech Innovators Inc.",
+        "address": "123 Innovation Drive, Tech City, TC 10001",
+        "phone": "(123) 555-7890",
+        "website": "https://www.techinnovators.example",
+        "image": "tech-innovators-inc.webp",
+        "membership_level": 3,
+        "tagline": "Leading in tech solutions to innovate the future."
+    },
+    {
+        "name": "EcoSmart Solutions",
+        "address": "456 Greenway Blvd, Sustain Town, ST 20002",
+        "phone": "(234) 555-8901",
+        "website": "https://www.ecosmart.example",
+        "image": "ecosmart-solutions.webp",
+        "membership_level": 2,
+        "tagline": "Providing eco-friendly products for a sustainable lifestyle."
+    },
+    {
+        "name": "Artisan Crafts Co.",
+        "address": "789 Craft Lane, Handmade City, HC 30003",
+        "phone": "(345) 555-9012",
+        "website": "https://www.artisancrafts.example",
+        "image": "artisan-crafts-co.webp",
+        "membership_level": 1,
+        "tagline": "Handmade crafts and unique gifts for all occasions."
+    },
+    {
+        "name": "Global Finance Group",
+        "address": "101 Finance Street, Money City, MC 40004",
+        "phone": "(456) 555-0123",
+        "website": "https://www.globalfinance.example",
+        "image": "global-finance-group.webp",
+        "membership_level": 3,
+        "tagline": "Global leaders in financial services and solutions."
+    },
+    {
+        "name": "NextGen Healthcare",
+        "address": "202 Wellness Ave, Health Town, HT 50005",
+        "phone": "(567) 555-1234",
+        "website": "https://www.nextgenhealthcare.example",
+        "image": "nextgen-healthcare.webp",
+        "membership_level": 3,
+        "tagline": "Innovative healthcare solutions for a healthier future."
+    },
+    {
+        "name": "Culinary Delights",
+        "address": "303 Gourmet Blvd, Food City, FC 60006",
+        "phone": "(678) 555-2345",
+        "website": "https://www.culinarydelights.example",
+        "image": "culinary-delights.webp",
+        "membership_level": 2,
+        "tagline": "A world of culinary experiences at your table."
+    },
+    {
+        "name": "Adventure Outdoors",
+        "address": "404 Adventure Road, Nature Town, NT 70007",
+        "phone": "(789) 555-3456",
+        "website": "https://www.adventureoutdoors.example",
+        "image": "adventure-outdoors.webp",
+        "membership_level": 1,
+        "tagline": "Explore the great outdoors with our adventure gear."
+    },
+    {
+        "name": "Digital Solutions Hub",
+        "address": "505 Digital Drive, Tech Valley, TV 80008",
+        "phone": "(890) 555-4567",
+        "website": "https://www.digitalsolutions.example",
+        "image": "digital-solutions-hub.webp",
+        "membership_level": 3,
+        "tagline": "Your hub for innovative digital transformation."
+    },
+    {
+        "name": "Home Comforts",
+        "address": "606 Cozy Lane, Comfort City, CC 90009",
+        "phone": "(901) 555-5678",
+        "website": "https://www.homecomforts.example",
+        "image": "home-comforts.webp",
+        "membership_level": 2,
+        "tagline": "Bringing comfort and style to your home."
+    },
+    {
+        "name": "Fitness First Gym",
+        "address": "707 Fitness Blvd, Health City, HC 10010",
+        "phone": "(012) 555-6789",
+        "website": "https://www.fitnessfirst.example",
+        "image": "fitness-first-gym.webp",
+        "membership_level": 1,
+        "tagline": "Your journey to fitness starts here."
+    }
+]
