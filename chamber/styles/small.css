@@ -21,6 +21,7 @@ nav {
 
 nav ul {
   margin: 0;
+  overflow: hidden;
 }
 
 nav li {
@@ -109,12 +110,17 @@ nav li {
 
 #nav-container.open {
   margin-top: 2rem;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .nav-link-list {
@@ -125,10 +131,17 @@ nav li {
   background-color: var(--main-color);
   color: #fff;
   padding: 0;
+  display: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.nav-link-list.open {
+  display: flex;
 }
 
 .nav-link-list a {
-  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
   padding: 0 1rem;
   text-align: left;
   text-decoration: none;
@@ -143,9 +156,9 @@ nav li {
   border-radius: 1rem;
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .active::before {

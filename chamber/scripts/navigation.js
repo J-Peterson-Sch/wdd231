@@ -5,14 +5,10 @@ const navContainer = document.querySelector('#nav-container')
 const nav = document.querySelector('nav');
 
 hamButton.addEventListener('click', () => {
+    nav.classList.toggle('open');
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
     navContainer.classList.toggle('open');
-    // if (window.innerWidth < 700) {
-    //     nav.classList.toggle('not-visible');
-    // } else {
-    //     nav.classList.remove('not-visible');
-    // }
 });
 
 modeButton.addEventListener('click', () => {
@@ -21,12 +17,6 @@ modeButton.addEventListener('click', () => {
 
 function checkViewportWidth() {
     const viewportWidth = window.innerWidth;
-    // if (viewportWidth < 700) {
-    //     nav.classList.add('not-visible');
-    // }
-    // else {
-    //     nav.classList.remove('not-visible');
-    // }
 }
 
 window.addEventListener('resize', checkViewportWidth);
