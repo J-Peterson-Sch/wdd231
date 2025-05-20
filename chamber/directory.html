@@ -10,7 +10,7 @@
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:description" content="Directory of companies that contribute to our community.">
     <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/chamber/directory">
-    <meta property="og:image" content="images/elantris-chamber-of-commerce.webp" alt="Elantris Chamber of Commerce"/>
+    <meta property="og:image" content="images/elantris-chamber-of-commerce.webp">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -27,7 +27,7 @@
     <header>
       <button id="menu" aria-label="menu"></button>
       <button id="mode" aria-label="mode">
-        <img src="images/circle-half.svg" alt="light or dark mode">
+        <img src="images/circle-half-white.svg" alt="light or dark mode">
       </button>
       <nav>
         <div id="text-seal">
@@ -50,6 +50,7 @@
     <main>
       <h1>Directory</h1>
       <div class="grid-toggle">
+        <h2 class="not-visible">Toggle between Grid and List view</h2>
         <button id="grid-view" class="active-view">Grid</button>
         <button id="table-view">List</button>
       </div>
@@ -59,16 +60,17 @@
       <div id="directory-table" class="not-visible">
 
       </div>
-      
+    </main>
     <footer>
       <section id="footer-contact">
-        <p><strong>Chamber of Commerce</strong></p>
+        <h3><strong>Chamber of Commerce</strong></h3>
         <p>190 Raoden Ave</p>
         <p>Elantris</p>
         <p>info@ElantrisCC.org</p>
         <p>(244) 555-3234</p>
       </section>
       <section id="social-media-icons">
+        <h3 class="not-visible">Social Media Links</h3>
         <a href="https://www.youtube.com">
           <img src="images/youtube.svg" alt="link to youtube">
         </a>
@@ -80,7 +82,7 @@
         </a>
       </section>
       <section id="schoo-info">
-        <p>WDD231 Class Project</p>
+        <h3>WDD231 Class Project</h3>
         <p>Jordan Peterson</p>
         <p id="currentyear">&copy;<span>placeholder</span></p>
         <p id="lastModified">placeholder</p>

@@ -13,7 +13,7 @@ function createMemberCard(member) {
     const card = document.createElement('div');
     card.classList.add('member-card');
 
-    const companyName = document.createElement('h3');
+    const companyName = document.createElement('h2');
     companyName.textContent = member.name;
 
     const tagline = document.createElement('p');
