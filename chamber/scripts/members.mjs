@@ -52,7 +52,7 @@ function createMemberCard(member) {
     return card;
 }
 
-async function displayMemberCards() {
+export async function displayMemberCards() {
     
     try {
         const membersList = await loadMembers();
@@ -71,7 +71,7 @@ async function displayMemberCards() {
     }
 }
 
-function createMemberListRow(member, viewport) {
+function createMemberListRow(member, viewport, sloganMinWidth) {
     const row = document.createElement('tr');
     const companyName = document.createElement('td');
     companyName.textContent = member.name;
@@ -95,7 +95,7 @@ function createMemberListRow(member, viewport) {
     return row;
 }
 
-async function displayMemberTable(viewport) {
+export async function displayMemberTable(viewport, sloganMinWidth) {
     
     try {
         const membersList = await loadMembers();
@@ -130,7 +130,7 @@ async function displayMemberTable(viewport) {
 
         // Generate and display table rows
         membersList.forEach(member => {
-            const row = createMemberListRow(member, viewport);
+            const row = createMemberListRow(member, viewport, sloganMinWidth);
             body.appendChild(row);
         });
         table.appendChild(body);
@@ -141,58 +141,24 @@ async function displayMemberTable(viewport) {
     }
 }
 
-// displayMemberCards();
-// displayMemberTable();
-let viewport = checkViewportWidth();
-const sloganMinWidth = 550;
-const gridButton = document.getElementById('grid-view');
-const tableButton = document.getElementById('table-view');
-const gridDiv = document.querySelector('#directory-grid');
-const tableDiv = document.querySelector('#directory-table');
+export async function displaySpotlingCards () {
+    try {
+        const membersList = await loadMembers();
 
-window.addEventListener('resize', function () {
-    viewport = checkViewportWidth();
+        const allSpotlightEligibleBusinesses = membersList.filter(member => member.membership_level === 1 || member.membership_level === 2);
+        const shuffled = allSpotlightEligibleBusinesses.sort(() => 0.5 - Math.random());
+        const spotlightedBusinesses = shuffled.slice(0, 3);
 
-    const activeView = document.querySelector('.active-view');
-    if (activeView.id === 'grid-view') {
-        displayMemberCards();
-    } else if (activeView.id === 'table-view') {
-        displayMemberTable(viewport);
-    } else {
-        console.log('There was an error deciding between grid and table view');
+        const grid = document.getElementById('spotlight-grid');
+        grid.innerHTML = '';
+
+        // Generate and display member cards
+        spotlightedBusinesses.forEach(member => {
+            const card = createMemberCard(member);
+            grid.appendChild(card);
+        });
+    } 
+    catch (error) {
+        console.error("An error occurred while displaying spotlight cards:", error);
     }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    viewport = checkViewportWidth();
-
-    const activeView = document.querySelector('.active-view');
-    if (activeView.id === 'grid-view') {
-        displayMemberCards();
-    } else if (activeView.id === 'table-view') {
-        displayMemberTable(viewport);
-    } else {
-        console.log('There was an error deciding between grid and table view');
-    }
-});
-
-gridButton.addEventListener ('click', function () {
-    if (!gridButton.classList.contains('active-view')) {
-        gridButton.classList.toggle('active-view');
-        tableButton.classList.toggle('active-view');
-        gridDiv.classList.toggle('not-visible');
-        tableDiv.classList.toggle('not-visible');
-        displayMemberCards();
-    }
-});
-
-tableButton.addEventListener ('click', function () {
-    if (!tableButton.classList.contains('active-view')) {
-        tableButton.classList.toggle('active-view');
-        gridButton.classList.toggle('active-view');
-        viewport = checkViewportWidth();
-        tableDiv.classList.toggle('not-visible');
-        gridDiv.classList.toggle('not-visible');
-        displayMemberTable(viewport);
-    }
-});
+}
