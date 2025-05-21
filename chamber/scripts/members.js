@@ -151,7 +151,6 @@ const gridDiv = document.querySelector('#directory-grid');
 const tableDiv = document.querySelector('#directory-table');
 
 window.addEventListener('resize', function () {
-    console.log('Window was resized')
     viewport = checkViewportWidth();
 
     const activeView = document.querySelector('.active-view');
