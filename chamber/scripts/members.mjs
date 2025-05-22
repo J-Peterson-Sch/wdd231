@@ -149,7 +149,7 @@ export async function displaySpotlingCards () {
         const shuffled = allSpotlightEligibleBusinesses.sort(() => 0.5 - Math.random());
         const spotlightedBusinesses = shuffled.slice(0, 3);
 
-        const grid = document.getElementById('spotlight-grid');
+        const grid = document.getElementById('directory-grid');
         grid.innerHTML = '';
 
         // Generate and display member cards
