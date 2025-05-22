@@ -170,28 +170,69 @@ nav li {
 }
 
 /* ************************Main************************ */
-h1 {
-  text-align: center;
-}
 
 main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 1rem auto;
+  max-width: 90vw;
+  justify-content: space-between;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.card h2{
+  background-color: var(--main-color);
+  padding: .5rem 0;
+  color: #fff;
+}
+
+
+.cta #join-us {
+  width: 90vw;
+  height: 150px;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.card {
+  border: solid black 1px;
+  border-radius: 18px;
+  margin: 1rem auto;
+  overflow: hidden;
 }
 
 #events-card {
   max-width: 600px;
-  border: solid black 1px;
-  border-radius: 18px;
 }
 
 #events-card ul {
   margin: 1rem 1rem 1rem 2rem;
 }
 
-#events-card ul {
-  margin: 1rem 1rem 1rem 2rem;
+#events-card li {
+  list-style-type: none;
+}
+
+.event-title {
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+#current-weather-card {
+  min-width: 300px;
+}
+
+#weather-forcast-card {
+  min-width: 300px;
+}
+
+#weather-forcast-card p{
+  margin: 1rem auto 1rem 1rem;
 }
 
 .grid-toggle {
@@ -207,6 +248,13 @@ main {
   color: #fff;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
 /* ************************Grid************************ */
 #directory-grid {
   display: flex;
