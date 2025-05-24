@@ -211,8 +211,8 @@ dialog {
 
 dialog button {
   position: absolute;
-  top: 23px;
-  right: 23px;
+  top: 12px;
+  right: 20px;
   padding: .5rem 1rem;
   border: 1px solid rgb(0 0 0 / 10%);
 }

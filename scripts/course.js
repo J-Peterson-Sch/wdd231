@@ -78,29 +78,28 @@ const courses = [
     }
 ]
 
-const buttons = document.querySelectorAll('button');
 const buttonAll = document.getElementById('all');
 const buttonCES = document.getElementById('ces');
 const buttonWDD = document.getElementById('wdd');
 const divClassButtons = document.querySelector('.button-classes');
 const pCredits = document.getElementById('credits');
-const courseDiv = document.querySelectorAll('.course-button');
-let filterdCourses = [];
+const courseDetails = document.getElementById('course-details'); // Fixing scope issue
+let filteredCourses = [];
 let totalCredits = 0;
-
-
 
 const createCourseButton = course => {
     const button = document.createElement('button');
     button.textContent = `${course.subject} ${course.number}`;
     button.classList.add('course-button');
-    if (course.completed == true) {
+    if (course.completed === true) {
         button.classList.add('selected');
     }
     divClassButtons.appendChild(button);
-    button.addEventListener('click', function () {
-        button.classList.toggle('selected');
-    })
+
+    // Add event listener for each button
+    button.addEventListener('click', () => {
+        displayingCourseDetails(course);
+    });
 };
 
 function createCourseButtons(courseList) {
@@ -110,7 +109,7 @@ function createCourseButtons(courseList) {
 }
 
 function clearCourseButtons() {
-    filterdCourses = [];
+    filteredCourses = [];
     divClassButtons.innerHTML = "";
 }
 
@@ -129,9 +128,9 @@ buttonCES.addEventListener("click", function () {
         unselectFilterButtons();
         buttonCES.classList.add('selected');
         clearCourseButtons();
-        filterdCourses = courses.filter(course => course.subject === 'CSE');
-        createCourseButtons(filterdCourses);
-        updateCourseCredits(filterdCourses);
+        filteredCourses = courses.filter(course => course.subject === 'CSE');
+        createCourseButtons(filteredCourses);
+        updateCourseCredits(filteredCourses);
     }
 });
 
@@ -140,10 +139,10 @@ buttonWDD.addEventListener("click", function () {
         unselectFilterButtons();
         buttonWDD.classList.add('selected');
         clearCourseButtons();
-        filterdCourses = courses.filter(course => course.subject === 'WDD');
-        createCourseButtons(filterdCourses);
-        updateCourseCredits(filterdCourses);
-    }  
+        filteredCourses = courses.filter(course => course.subject === 'WDD');
+        createCourseButtons(filteredCourses);
+        updateCourseCredits(filteredCourses);
+    }
 });
 
 function unselectFilterButtons() {
@@ -155,35 +154,28 @@ function unselectFilterButtons() {
 function updateCourseCredits(courseList) {
     totalCredits = courseList.reduce((accumulator, course) => {
         return accumulator + course.credits;
-    },0);
+    }, 0);
 
     pCredits.textContent = `${totalCredits} total credits for the courses listed below.`;
 }
 
 function displayingCourseDetails(course) {
-    courseDetails.innerHTML = '';
     courseDetails.innerHTML = `
-    <button id="closeModal">❌</button>
-    <h2>${course.subject} ${course.number}</h2>
-    <h3>${course.title}</h3>
-    <p><strong>Credits</strong>: ${course.credits}</p>
-    <p><strong>Certificate</strong>: ${course.certificate}</p>
-    <p>${course.description}</p>
-    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
     `;
     courseDetails.showModal();
-    
+
+    const closeModal = document.getElementById('closeModal');
     closeModal.addEventListener("click", () => {
         courseDetails.close();
-    })
+    });
 }
 
-courseDiv.addEventListener('click', () => {
-    displayingCourseDetails(course);
-});
-
-courses.forEach(course => {
-    createCourseButton(course);
-});
-
+createCourseButtons(courses);
 updateCourseCredits(courses);
