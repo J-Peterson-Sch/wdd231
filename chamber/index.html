@@ -61,50 +61,52 @@
           <button>Join us!</button>
         </div>
       </div>
-
-      <div id="events-card" class="card">
-        <h2>Events</h2>
-        <ul>
-          <li class="event-title">Business Networking Breakfast</li>
-          <li class="event-date"><strong>Date: </strong>Thursday, June 23, 2025</li>
-          <li class="event-time"><strong>Time: </strong>7:30 AM – 9:00 AM</li>
-          <li class="event-location"><strong>Location: </strong>Sunrise Café Conference Room</li>
-          <li class="event-details"><strong>Details: </strong>Join fellow local business owners and professionals 
-            for an early morning networking session. Coffee and breakfast provided. Bring 
-            business cards and be ready to connect!</li>
-        </ul>
-        <ul>
-          <li class="event-title">Summer Street Fair & Business Expo</li>
-          <li class="event-date"><strong>Date: </strong>Saturday, July 6, 2025</li>
-          <li class="event-time"><strong>Time: </strong>10:00 AM – 4:00 PM</li>
-          <li class="event-location"><strong>Location: </strong>Downtown Main Street</li>
-          <li class="event-details"><strong>Details: </strong>Family-friendly street fair featuring live music, 
-            food trucks, kids' activities, and vendor booths from over 50 local businesses. 
-            Free admission.</li>
-        </ul>
-      </div>
-
-      <div id="current-weather-card" class="card">
-        <h2>Current Weather</h2>
-        <div id="current-weather">
-          <div><img id="weather-icon" src="images/weather/patch-question.svg" alt="weather didn't load"></div>
-          <div id="current-weather-data">
-            <p><span id="current-temp">00</span>&deg; F</p>
-            <p><span id="weather-description">Weather didn't load</span></p>
-            <p>Humidity: <span id="humidity">00</span>%</p>
-            <p>Sunrise: <span id="rise">00:00</span> AM</p>
-            <p>Sunset: <span id="set">00:00</span> PM</p>
+      <div id="cards-div">
+        <div id="events-card" class="card">
+          <h2>Events</h2>
+          <ul>
+            <li class="event-title">Business Networking Breakfast</li>
+            <li class="event-date"><strong>Date: </strong>Thursday, June 23, 2025</li>
+            <li class="event-time"><strong>Time: </strong>7:30 AM – 9:00 AM</li>
+            <li class="event-location"><strong>Location: </strong>Sunrise Café Conference Room</li>
+            <li class="event-details"><strong>Details: </strong>Join fellow local business owners and professionals 
+              for an early morning networking session. Coffee and breakfast provided. Bring 
+              business cards and be ready to connect!</li>
+          </ul>
+          <ul>
+            <li class="event-title">Summer Street Fair & Business Expo</li>
+            <li class="event-date"><strong>Date: </strong>Saturday, July 6, 2025</li>
+            <li class="event-time"><strong>Time: </strong>10:00 AM – 4:00 PM</li>
+            <li class="event-location"><strong>Location: </strong>Downtown Main Street</li>
+            <li class="event-details"><strong>Details: </strong>Family-friendly street fair featuring live music, 
+              food trucks, kids' activities, and vendor booths from over 50 local businesses. 
+              Free admission.</li>
+          </ul>
+        </div>
+  
+        <div id="current-weather-card" class="card">
+          <h2>Current Weather</h2>
+          <div id="current-weather">
+            <div><img id="weather-icon" src="images/weather/patch-question.svg" alt="weather didn't load"></div>
+            <div id="current-weather-data">
+              <p><span id="current-temp">00</span>&deg; F</p>
+              <p><span id="weather-description">Weather didn't load</span></p>
+              <p>Humidity: <span id="humidity">00</span>%</p>
+              <p>Sunrise: <span id="rise">00:00</span> AM</p>
+              <p>Sunset: <span id="set">00:00</span> PM</p>
+            </div>
+          </div>
+        </div>
+        <div id="weather-forcast-card" class="card">
+          <h2>Weather Forcast</h2>
+          <div>
+            <p><span class="bold">Today: </span><span id="today">00</span>&deg; F</p>
+            <p><span id="tomorrow-day" class="bold">Tomorrow: </span><span id="tomorrow">00</span>&deg; F</p>
+            <p><span id="third-day-day" class="bold">Wednessday: </span><span id="third-day">00</span>&deg; F</p>
           </div>
         </div>
       </div>
-      <div id="weather-forcast-card" class="card">
-        <h2>Weather Forcast</h2>
-        <div>
-          <p><span class="bold">Today: </span><span id="today">00</span>&deg; F</p>
-          <p><span id="tomorrow-day" class="bold">Tomorrow: </span><span id="tomorrow">00</span>&deg; F</p>
-          <p><span id="third-day-day" class="bold">Wednessday: </span><span id="third-day">00</span>&deg; F</p>
-        </div>
-      </div>
+
 
       <div id="spotlight"><div id="directory-grid"></div></div>
 

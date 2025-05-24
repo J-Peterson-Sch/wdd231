@@ -177,7 +177,7 @@ main {
   flex-wrap: wrap;
   margin: 1rem auto;
   max-width: 90vw;
-  justify-content: space-between;
+  justify-content: center;
   gap: .8rem;
 }
 
@@ -193,6 +193,14 @@ h1, h2 {
   width: 100vw;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+#cards-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  justify-content: center;
 }
 
 .card h2{
@@ -227,12 +235,13 @@ h1, h2 {
 .card {
   border: solid black 1px;
   border-radius: 18px;
-  margin: 2rem auto 1rem auto;
+  margin: 2rem 0 1rem 0;
   overflow: hidden;
 }
 
 #events-card {
   max-width: 600px;
+  min-width: 350px;
 }
 
 #events-card ul {
@@ -452,4 +461,3 @@ footer h3 {
   font-size: 1.2rem;
   margin-bottom: .5rem;
 }
-
