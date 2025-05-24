@@ -84,6 +84,7 @@ const buttonCES = document.getElementById('ces');
 const buttonWDD = document.getElementById('wdd');
 const divClassButtons = document.querySelector('.button-classes');
 const pCredits = document.getElementById('credits');
+const courseDiv = document.querySelectorAll('.course-button');
 let filterdCourses = [];
 let totalCredits = 0;
 
@@ -158,6 +159,28 @@ function updateCourseCredits(courseList) {
 
     pCredits.textContent = `${totalCredits} total credits for the courses listed below.`;
 }
+
+function displayingCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+    
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    })
+}
+
+courseDiv.addEventListener('click', () => {
+    displayingCourseDetails(course);
+});
 
 courses.forEach(course => {
     createCourseButton(course);
