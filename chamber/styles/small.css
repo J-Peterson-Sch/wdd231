@@ -225,14 +225,6 @@ h1, h2 {
   right: 100px;
 }
 
-#join-us a,
-#join-us a:visited,
-#join-us a:hover,
-#join-us a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 .card {
   border: solid black 1px;
   border-radius: 18px;
