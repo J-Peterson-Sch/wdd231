@@ -415,6 +415,51 @@ table tbody tr:nth-child(even) {
 }
 
 /* ************************footer************************ */
+form {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+abel {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#membership-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.membership-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+/* ************************footer************************ */
 
 footer {
   background: var(--secondary-color);

@@ -77,6 +77,10 @@
     #hero img{
         width: 90vw;
     }
+
+    #membership-cards {
+        flex-direction: row;
+    }
    
     /* ************************footer************************ */
     footer {
