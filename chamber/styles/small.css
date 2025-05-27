@@ -178,6 +178,7 @@ main {
   margin: 1rem auto;
   max-width: 90vw;
   justify-content: center;
+  align-items: center;
   gap: .8rem;
 }
 
