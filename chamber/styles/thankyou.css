@@ -1,0 +1,9 @@
+#thankyou {
+    max-width: 700px;
+    margin: 1rem auto 25rem auto;
+    font-size: 1.2rem;
+}
+
+#thankyou p {
+    line-height: 1.8;
+}

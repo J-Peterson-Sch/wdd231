@@ -1,3 +1,6 @@
+'use strict'
+import { getTimeString, getDateStringFromUnix } from "./datetime.mjs";
+
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const weatherDesc = document.querySelector('#weather-description');
@@ -11,29 +14,12 @@ const thirdDayTemp = document.querySelector('#third-day');
 const urlWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=36.768446705675075&lon=-76.2666151320338&units=imperial&APPID=6e1c069e70da582a0591cf8f58953e6e';
 const urlForcast = 'https://api.openweathermap.org/data/2.5/forecast?lat=36.768446705675075&lon=-76.2666151320338&units=imperial&appid=6e1c069e70da582a0591cf8f58953e6e'
 
-function getDateString(unixTimestamp) {
-    const date = new Date(unixTimestamp * 1000);
-    return date.toISOString().split('T')[0];
-}
-
-function getTimeString(unixTimestamp,timezone) {
-    const time = new Date(unixTimestamp * 1000 + timezone * 1000);
-    const fulltime = time.toISOString().split('T')[1];
-    let hour = fulltime.split(':')[0];
-    let minute = fulltime.split(':')[2].split('.')[0];
-    if (Number(hour)>12) {
-        hour = Number(hour) - 12;
-    }
-    return `${hour}:${minute}`;
-
-}
-
 function getDailyHighLow(forecastData) {
     const highTemps = {};
     const lowTemps = {};
 
     forecastData.forEach(entry => {
-        const dateStr = getDateString(entry.dt);
+        const dateStr = getDateStringFromUnix(entry.dt);
         const temp = entry.main.temp;
 
         if (!highTemps[dateStr]) {
@@ -81,8 +67,8 @@ async function getForecast() {
 }
 
 async function displayWeatherData() {
-    weatherData = await getWeather();
-    forecastData = await getForecast();
+    const weatherData = await getWeather();
+    const forecastData = await getForecast();
     currentTemp.textContent = weatherData.main.temp;
     const iconCode = weatherData.weather[0].icon.slice(0, 2);
 

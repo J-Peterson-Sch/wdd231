@@ -78,8 +78,13 @@
         width: 90vw;
     }
 
+    #join-form {
+        max-height: 950px;
+        gap: 1.5rem;
+    }
+
     #membership-cards {
-        flex-direction: row;
+
     }
    
     /* ************************footer************************ */
