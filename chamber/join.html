@@ -49,14 +49,12 @@
           </div>
         </div>
       </nav>
-      <div id="hero">
-        <img src="images/elantris-hero-wide.webp" alt="City of Elantris">
-        <button id="join-us" onclick="location.href='index.html';">Join us!</button>
-        
+      
       </div>
     </header>
     <main>
       <h1>Membership Application Form</h1>
+      <div id="join-form">
         <form method="get" action="thankyou.html">
             <label>
                 First Name
@@ -85,7 +83,7 @@
             <label>
                 Membership Level
                 <select name="membershipLevel" required>
-                    <option value="np">NP Membership</option>
+                    <option value="np">Non Profit Membership</option>
                     <option value="bronze">Bronze Membership</option>
                     <option value="silver">Silver Membership</option>
                     <option value="gold">Gold Membership</option>
@@ -96,13 +94,13 @@
                 <textarea name="orgDescription" title="Organization Description"></textarea>
             </label>
             <input type="hidden" name="timestamp" id="timestamp">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Join Us">
         </form>
 
         <h2>Membership Levels</h2>
         <div id="membership-cards">
             <div class="membership-card">
-                <h3>NP Membership</h3>
+                <h3>Non Profit Membership</h3>
                 <button onclick="openModal('np')">Learn More</button>
             </div>
             <div class="membership-card">
@@ -121,7 +119,7 @@
 
         <!-- Modals for Membership Benefits -->
         <dialog id="modal-np">
-            <h3>NP Membership Benefits</h3>
+            <h3>Non Profit Membership Benefits</h3>
             <p>No fees, special events access, training sessions.</p>
             <button onclick="closeModal('np')">Close</button>
         </dialog>
@@ -140,8 +138,7 @@
             <p>Spotlight advertisements, large event discounts, special event invitations.</p>
             <button onclick="closeModal('gold')">Close</button>
         </dialog>
-      
-
+      </div>
     </main>
 
     <footer>

@@ -381,20 +381,20 @@ h1, h2 {
 
 /* ************************Table*********************** */
 #directory-table {
-    max-width: 100%;
-    overflow-x: auto;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 table thead th {
@@ -414,13 +414,21 @@ table tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* ************************footer************************ */
+/* ************************form************************ */
+#join-form {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 form {
   max-width: 300px;
   margin: 20px auto;
 }
 
-abel {
+label {
     display: block;
     margin-bottom: 10px;
 }
@@ -430,33 +438,49 @@ input[type="email"],
 input[type="tel"],
 select,
 textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 12px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 input[type="submit"] {
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 #membership-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 2s ease-out;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-out;
 }
 
 .membership-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 200px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.membership-card h3 {
+  margin: 1rem;
+}
+
+.membership-card button {
+  width: 125px;
+  height: 35px;
+  background-color: #d4d4d4;
+  border: solid black 1px;
+  border-radius: 5px;
 }
 
 /* ************************footer************************ */

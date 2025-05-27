@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elantris Chamber of Commerce</title>
+    <meta name="description" content="Welcome page for the Elantris Chamber of Commerce.">
+    <meta name="author" content="Jordan Peterson">
+    
+    <meta property="og:title" content="Elantris Chamber of Commerce">
+    <meta property="og:description" content="Welcome page for the Elantris Chamber of Commerce.">
+    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/chamber/images/elantris-chamber-of-commerce.webp">
+
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script type="module" src="scripts/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <button id="menu" aria-label="menu"></button>
+      <button id="mode" aria-label="mode">
+        <img src="images/circle-half-white.svg" alt="light or dark mode">
+      </button>
+      <nav>
+        <div id="text-seal">
+          <img id="seal" src="images/elantris-seal.webp" alt="Elantris Chamber of Commerce Seal">
+          <span id="header-elantris">Elantris</span>
+          <span id="header-subtitle">Chamber of Commerce</span>
+        </div>
+        <div id="nav-container">
+          <div id="nav-buttons">
+            <ul class="nav-link-list">
+              <li><a href="index.html" title="Home" class="active">Home</a></li>
+              <li><a href="directory.html" title="Directory">Directory</a></li>
+              <li><a href="index.html" title="Join">Join</a></li>
+              <li><a href="index.html" title="Discover">Discover</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="hero">
+        <img src="images/elantris-hero-wide.webp" alt="City of Elantris">
+        <button id="join-us" onclick="location.href='index.html';">Join us!</button>
+        
+      </div>
+    </header>
+    <main>
+      <h1>Thank you for joining</h1>
+
+
+    </main>
+
+    <footer>
+      <section id="footer-contact">
+        <h3><strong>Chamber of Commerce</strong></h3>
+        <p>190 Raoden Ave</p>
+        <p>Elantris</p>
+        <p>info@ElantrisCC.org</p>
+        <p>(244) 555-3234</p>
+      </section>
+      <section id="social-media-icons">
+        <h3 class="not-visible">Social Media Links</h3>
+        <a href="https://www.youtube.com">
+          <img src="images/youtube.svg" alt="link to youtube">
+        </a>
+        <a href="https://x.com">
+          <img src="images/twitter-x.svg" alt="link to twitter/x">
+        </a>
+        <a href="https://www.linkedin.com">
+          <img src="images/linkedin.svg" alt="link to linkedin">
+        </a>
+      </section>
+      <section id="schoo-info">
+        <h3>WDD231 Class Project</h3>
+        <p>Jordan Peterson</p>
+        <p id="currentyear">&copy;<span>placeholder</span></p>
+        <p id="lastModified">placeholder</p>
+      </section>
+    </footer>
+  </body>
+</html>
