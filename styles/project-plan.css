@@ -1,11 +1,3 @@
-/* Classic Cinema Theme
-
-Background: Dark Slate Gray (#2F4F4F)
-Text: Floral White (#FFFAF0)
-Accents: Golden Rod (#DAA520) for buttons and highlights
-Links: Light Steel Blue (#B0C4DE)
-Modern Noir Theme */
-
 :root {
     --background-color: #2F4F4F;
     --text-color: #FFFAF0;
@@ -13,75 +5,8 @@ Modern Noir Theme */
     --links-color: #B0C4DE;
 }
 
-
-/* Background: Black (#000000)
-Text: Light Gray (#D3D3D3)
-Accents: Crimson (#DC143C) for interactive elements
-Links: Deep Sky Blue (#00BFFF)
-Retro Vibe Theme */
-
-/* :root {
-    --background-color: #000000;
-    --text-color: #D3D3D3;
-    --accents-color: #DC143C;
-    --links-color: #00BFFF;
-} */
-
-/* Background: Midnight Blue (#191970)
-Text: Gainsboro (#DCDCDC)
-Accents: Tomato (#FF6347) for call-to-action buttons
-Links: Medium Aquamarine (#66CDAA)
-Natural Film Theme */
-
-/* :root {
-    --background-color: #191970;
-    --text-color: #DCDCDC;
-    --accents-color: #FF6347;
-    --links-color: #66CDAA;
-} */
-
-/* Background: Dark Olive Green (#556B2F)
-Text: Seashell (#FFF5EE)
-Accents: Pale Goldenrod (#EEE8AA) for buttons and highlights
-Links: Light Corral (#F08080)
-Monochrome Film Theme */
-
-/* :root {
-    --background-color: #556B2F;
-    --text-color: #FFF5EE;
-    --accents-color: #EEE8AA;
-    --links-color: #F08080;
-} */
-
-/* Background: Charcoal (#36454F)
-Text: White Smoke (#F5F5F5)
-Accents: Silver (#C0C0C0) for secondary information
-Links: Dodger Blue (#1E90FF)
-Playful Yet Professional Theme */
-
-/* :root {
-    --background-color: #36454F;
-    --text-color: #F5F5F5;
-    --accents-color: #C0C0C0;
-    --links-color: #1E90FF;
-} */
-
-/* Background: Dark Slate Blue (#483D8B)
-Text: Honeydew (#F0FFF0)
-Accents: Coral (#FF7F50) for buttons
-Links: Light Sky Blue (#87CEFA) */
-
-/* :root {
-    --background-color: #483D8B;
-    --text-color: #F0FFF0;
-    --accents-color: #FF7F50;
-    --links-color: #87CEFA;
-} */
-
-
 .cinzel {
   font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -89,11 +14,8 @@ Links: Light Sky Blue (#87CEFA) */
 
 .merriweather {
   font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings:
-    "width" 100;
 }
 
 body {
