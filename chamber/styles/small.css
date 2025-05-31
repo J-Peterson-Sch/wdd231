@@ -495,6 +495,53 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
+/* ************************location cards**************** */
+
+#all-locations div {
+  margin: 1rem;
+  border: 1px solid black;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-areas:
+  "name"
+  "caption"
+  "desc"
+  "address";
+}
+
+#all-locations div h2 {
+  margin: 0;
+  padding: 1rem;
+  grid-area: name;
+}
+
+#all-locations div figure {
+  margin: 0;
+  padding: 1rem;
+  justify-self: center;
+  align-self: start;
+  grid-area: caption;
+}
+
+#all-locations div img {
+  width: 100%;
+  grid-area: image;
+}
+
+#all-locations div p {
+  margin: 0;
+  padding: 1rem;
+  grid-area: desc;
+}
+
+#all-locations div address {
+  margin: 0;
+  padding: 1rem;
+  grid-area: address;
+}
 
 /* ************************footer************************ */
 

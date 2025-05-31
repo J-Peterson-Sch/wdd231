@@ -1,4 +1,4 @@
-@media (min-width: 700px){
+@media (min-width: 1025px){
 
     .title-bar {
     flex-direction: row;
@@ -85,6 +85,11 @@
 
     #membership-cards {
 
+    }
+
+    #all-locations {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
    
     /* ************************footer************************ */
