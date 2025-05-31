@@ -10,4 +10,4 @@ const lastVisitElement = document.getElementById('last-visit');
 lastVisitElement.textContent = lastVisit;
 
 const diffElement = document.getElementById('days-since-last-visit');
-diffElement.textContent = (theDateToday - lastVisit) / msToDays;
+diffElement.textContent = `${Math.floor((theDateToday - lastVisit) / msToDays)} days since last visit`;
