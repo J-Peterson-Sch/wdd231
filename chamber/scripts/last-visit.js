@@ -1,10 +1,9 @@
 const msToDays = 86400000;
 const theDateToday = Date.now();
 
-
-// ------------------------------------------------------------------------
-
 let lastVisit = localStorage.getItem('lastVisitedDate') || false;
+
+// need to simulate older dates by subtracting msToDays
 
 if (lastVisit){
     const todayElement = document.getElementById('today');
