@@ -83,13 +83,13 @@
         gap: 1.5rem;
     }
 
-    #membership-cards {
-
-    }
-
     #all-locations {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .location-image:hover {
+        transform: scale(1.08);
     }
    
     /* ************************footer************************ */

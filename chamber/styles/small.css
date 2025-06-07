@@ -545,7 +545,7 @@ input[type="submit"] {
 
 /* ************************discover page************************ */
 #last-visit-message {
-  min-width: 150px;
+  font-size: 1.2rem;
 }
 
 /* ************************footer************************ */
