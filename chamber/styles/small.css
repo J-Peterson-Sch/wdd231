@@ -543,6 +543,11 @@ input[type="submit"] {
   grid-area: address;
 }
 
+/* ************************discover page************************ */
+#last-visit-message {
+  min-width: 150px;
+}
+
 /* ************************footer************************ */
 
 footer {

@@ -1,21 +1,24 @@
 const msToDays = 86400000;
 const theDateToday = Date.now();
+const lastVisitMessage = document.getElementById('last-visit-message');
 
-let lastVisit = localStorage.getItem('lastVisitedDate') || false;
+const lastVisit = localStorage.getItem('lastVisitedDate') || false;
 
-// need to simulate older dates by subtracting msToDays
+// used to test other last visited dates
+// lastVisit = new Date("2025-06-01");
 
-if (lastVisit){
-    const todayElement = document.getElementById('today');
-    todayElement.textContent = theDateToday;
-    console.log(theDateToday);
-
-    const lastVisitElement = document.getElementById('last-visit');
-    lastVisitElement.textContent = lastVisit;
-
-    const diffElement = document.getElementById('days-since-last-visit');
-    diffElement.textContent = `${Math.floor((theDateToday - lastVisit) / msToDays)} days since last visit`;
-} else {
-    localStorage.lastVisitedDate = theDateToday
+function checkLastVisit () {
+    if (lastVisit){
+        const daysSinceLastVisit = Math.floor((theDateToday - lastVisit) / msToDays);
+        if (daysSinceLastVisit >= 1) {
+            lastVisitMessage.textContent = `You last visited ${Math.trunc(daysSinceLastVisit)} days ago.`;
+        } else {
+            lastVisitMessage.textContent = 'Back so soon! Awesome!';
+        }
+    } else {
+        localStorage.lastVisitedDate = theDateToday
+        lastVisitMessage.textContent = 'Welcome! Let us know if you have any questions.';
+    }
 }
 
+checkLastVisit();
