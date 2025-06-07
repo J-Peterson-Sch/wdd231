@@ -16,6 +16,7 @@ function createLocationCard(location) {
     image.src = `images/locations/${location.file}`;
     image.alt = `Image of ${location.name}`;
     image.classList.add('location-image');
+    image.loading = 'lazy';
 
     const figcaption = document.createElement('figcaption');
     figcaption.textContent = `${location.name}, Elantris, Opelon, Sel`;
