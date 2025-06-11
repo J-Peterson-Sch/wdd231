@@ -21,28 +21,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
     <script src="scripts/index.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
   </head>
 
     <body>
         <header>
             <button id="menu" aria-label="menu"></button>
-            <button id="mode" aria-label="mode">
-                <img src="images/circle-half-white.svg" alt="light or dark mode">
-            </button>
             <nav>
-                <div id="text-seal">
-                <img id="seal" src="images/elantris-seal.webp" alt="Elantris Chamber of Commerce Seal">
-                <span id="header-elantris">Elantris</span>
-                <span id="header-subtitle">Chamber of Commerce</span>
+                <div id="logo-area">
+                    <img id="logo" src="images/logo.webp" alt="movie night logo">
                 </div>
                 <div id="nav-container">
-                <div id="nav-buttons">
-                    <ul class="nav-link-list">
-                    <li><a href="index.html" title="Home" class="active">Home</a></li>
-                    <li><a href="movies.html" title="Movie List">Movie List</a></li>
-                    <li><a href="request.html" title="Request Movie">Request Movie</a></li>
-                    </ul>
-                </div>
+                    <div id="nav-buttons">
+                        <ul class="nav-link-list">
+                            <li><a href="index.html" title="Home" class="active">Home</a></li>
+                            <li><a href="movies.html" title="Movie List">Movie List</a></li>
+                            <li><a href="request.html" title="Request Movie">Request Movie</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
             <div id="hero">
@@ -52,23 +49,25 @@
         <main>
             <h1>Movie Night</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis earum, quaerat officiis enim asperiores accusamus qui vel obcaecati natus architecto temporibus debitis, esse illo voluptatem voluptate, amet itaque eos quia.</p>
-            <div id="calendar">
-                <h2>Calendar</h2>
-                <ul>
-                    <li>6/13 - Movie Night - some movie title</li>
-                    <li>6/20 - Movie Night - some movie title</li>
-                    <li>6/27 - Movie Night - some movie title</li>
-                    <li>7/04 - No Movie (Forth of July)</li>
-                    <li>7/11 - Movie Night - some movie title</li>
-                </ul>
-            </div>
-
-            <div class="movie-highlight">
-                <h2>Last Weeks Movie</h2>
-                <figure>
-                  <img src="path" alt="last weeks movie was The Bourne Identity">
-                  <figcaption>The Bourne Identity</figcaption>
-                </figure>
+            <div id="homepage-content">
+                <div id="calendar">
+                    <h2>Calendar</h2>
+                    <ul>
+                        <li>6/13 - Movie Night - some movie title</li>
+                        <li>6/20 - Movie Night - some movie title</li>
+                        <li>6/27 - Movie Night - some movie title</li>
+                        <li>7/04 - No Movie (Forth of July)</li>
+                        <li>7/11 - Movie Night - some movie title</li>
+                    </ul>
+                </div>
+    
+                <div class="movie-highlight">
+                    <h2>Last Weeks Movie</h2>
+                    <figure>
+                      <img src="path" alt="last weeks movie was The Bourne Identity">
+                      <figcaption>The Bourne Identity</figcaption>
+                    </figure>
+                </div>
             </div>
         </main>
 
