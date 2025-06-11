@@ -137,7 +137,8 @@ nav li {
   padding: 0 1rem;
   text-align: left;
   text-decoration: none;
-  color: #fff;
+  color: var(--background-color);
+  font-weight: 800;
   font-size: 1.5rem;
   position: relative;
 }
@@ -196,6 +197,7 @@ h1 {
 
 h2 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 #hero {
@@ -210,13 +212,12 @@ h2 {
 }
 
 #homepage-content {
-  width: 100vw;
-  margin: 3rem 0;
+  width: 90vw;
+  margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: space-around;
   gap: 3rem;
 }
 
@@ -255,6 +256,8 @@ h2 {
   margin: 2rem 0 1rem 0;
   overflow: hidden;
 }
+
+
 /* ************************movie grid*************************** */
 
 #movies-grid {
@@ -292,7 +295,7 @@ h2 {
 
 .movie-card a {
     font-size: 2rem;
-    color: white;
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -302,77 +305,88 @@ h2 {
 }
 
 /* ************************form************************ */
-#request-form {
-  /* max-width: 700px; */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-form {
-  max-width: 400px;
-  margin: 20px auto;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 3rem 1rem 3rem 1rem;
+.form {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  padding: 20px;
+  border: 3px solid var(--links-color);
+  border-radius: 8px;
+  line-height: 1.8rem;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
+input[type="email"] {
   width: 100%;
   padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-input[type="submit"] {
-  padding: 10px;
-  background-color: var(--secondary-color);
-  color: black;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#membership-cards {
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   align-items: center;
-  animation: fadeIn 1s ease-out forwards;
 }
 
-
-.membership-card {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  width: 200px;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
+.modal-content {
+  background-color: var(--text-color);
+  color: black;
+  padding: 20px;
+  border: 2px solid var(--links-color);
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  line-height: 1.8rem;
+  text-indent: 1rem;
 }
 
-.membership-card h3 {
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#imdb-label {
+  display: flex;
+  align-items: center;
+}
+
+#imdb-info-button {
+  width: 25px;
+  height: 25px;
   margin: 1rem;
+  background-color: var(--links-color);
+  border: none;
+  border-radius: 8px;
 }
 
-.membership-card button {
-  width: 125px;
-  height: 35px;
-  background-color: #d4d4d4;
-  border: solid black 1px;
-  border-radius: 5px;
+#send-request {
+  width: 200px;
+  height: 40px;
+  background-color: var(--links-color);
+  border: none;
+  border-radius: 8px;
 }
 
 /* ************************footer************************ */
