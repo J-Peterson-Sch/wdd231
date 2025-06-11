@@ -285,6 +285,7 @@ h2 {
     padding: .8rem 0;
     max-width: 250px;
     text-align: center;
+    font-weight: 800;
 }
 
 .movie-card img{
