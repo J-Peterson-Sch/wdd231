@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Night</title>
+    <meta name="description" content="Welcome page for Movie Night.">
+    <meta name="author" content="Jordan Peterson">
+    
+    <meta property="og:title" content="Movie Night">
+    <meta property="og:description" content="Welcome page for Movie Night.">
+    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/movie-night/index.html">
+    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/movie-night/images/<to add later>.webp">
+
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+    <script src="scripts/index.js" defer></script>
+  </head>
+
+    <body>
+        <header>
+            <button id="menu" aria-label="menu"></button>
+            <button id="mode" aria-label="mode">
+                <img src="images/circle-half-white.svg" alt="light or dark mode">
+            </button>
+            <nav>
+                <div id="text-seal">
+                <img id="seal" src="images/elantris-seal.webp" alt="Elantris Chamber of Commerce Seal">
+                <span id="header-elantris">Elantris</span>
+                <span id="header-subtitle">Chamber of Commerce</span>
+                </div>
+                <div id="nav-container">
+                <div id="nav-buttons">
+                    <ul class="nav-link-list">
+                    <li><a href="index.html" title="Home" class="active">Home</a></li>
+                    <li><a href="movies.html" title="Movie List">Movie List</a></li>
+                    <li><a href="request.html" title="Request Movie">Request Movie</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <div id="hero">
+                <img src="images/hero.webp" alt="Friends watching a movie">
+            </div>
+        </header>
+        <main>
+            <h1>Movie Night</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis earum, quaerat officiis enim asperiores accusamus qui vel obcaecati natus architecto temporibus debitis, esse illo voluptatem voluptate, amet itaque eos quia.</p>
+            <div id="calendar">
+                <h2>Calendar</h2>
+                <ul>
+                    <li>6/13 - Movie Night - some movie title</li>
+                    <li>6/20 - Movie Night - some movie title</li>
+                    <li>6/27 - Movie Night - some movie title</li>
+                    <li>7/04 - No Movie (Forth of July)</li>
+                    <li>7/11 - Movie Night - some movie title</li>
+                </ul>
+            </div>
+
+            <div class="movie-highlight">
+                <h2>Last Weeks Movie</h2>
+                <figure>
+                  <img src="path" alt="last weeks movie was The Bourne Identity">
+                  <figcaption>The Bourne Identity</figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <footer>
+        <section id="footer-contact">
+            <h3><strong>Movie Night</strong></h3>
+        </section>
+        <section id="social-media-icons">
+            <h3 class="not-visible">Social Media Links</h3>
+            <a href="https://www.youtube.com">
+            <img src="images/youtube.svg" alt="link to youtube">
+            </a>
+            <a href="https://x.com">
+            <img src="images/twitter-x.svg" alt="link to twitter/x">
+            </a>
+            <a href="https://www.linkedin.com">
+            <img src="images/linkedin.svg" alt="link to linkedin">
+            </a>
+        </section>
+        <section id="schoo-info">
+            <h3>WDD231 Class Project</h3>
+            <p>Jordan Peterson</p>
+            <p id="currentyear">&copy;<span>placeholder</span></p>
+            <p id="lastModified">placeholder</p>
+        </section>
+        </footer>
+    </body>
+</html>
