@@ -255,6 +255,51 @@ h2 {
   margin: 2rem 0 1rem 0;
   overflow: hidden;
 }
+/* ************************movie grid*************************** */
+
+#movies-grid {
+  margin-top: 1rem;
+}
+
+.watched {
+    border: 2px solid var(--accents-color);
+    overflow: hidden;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.movie-card {
+    /* max-width: 250px; */
+    padding: 5px;
+}
+
+.movie-card h3 {
+    padding: .8rem 0;
+    max-width: 250px;
+    text-align: center;
+}
+
+.movie-card img{
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.movie-card a {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.card-info {
+  line-height: 1.8rem;
+  justify-self: end;
+}
 
 /* ************************form************************ */
 #request-form {
