@@ -1,9 +1,12 @@
 'use strict';
+import { filter, sort } from "./filters.mjs";
 
 
 // const MOVIE_IDS = ["tt0111161", "tt0068646", "tt0071562"];
 const API_KEY = 'f6a4ead9';
 const CACHE_KEY = 'cachedMovies';
+const ewmCheckbox = document.getElementById('exclude-watched-movies');
+const sortSelect = document.getElementById('movie-filter');
 
 async function loadMovieIDs() {
     const response = await fetch('data/movies.json');
@@ -73,8 +76,12 @@ async function displayMovies() {
         const movieIDs = await loadMovieIDs();
         let movies = await getMoviesData(movieIDs);
 
+        // Filter out the watched moves
+        movies = filter(movies,watchedMovies);
+
         // Sort the movies alphabetically by the Title
-        movies.sort((a, b) => a.Title.localeCompare(b.Title));
+        sort(movies);
+        // movies.sort((a, b) => a.Title.localeCompare(b.Title));
 
         const grid = document.getElementById('movies-grid');
         grid.innerHTML = ''; // Clear existing movies

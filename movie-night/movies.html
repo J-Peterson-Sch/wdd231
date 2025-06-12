@@ -48,14 +48,18 @@
             <h1>Movies We're Planning on Watching</h1>
             <h2>Movies with a box around them are ones that we've already watched</h2>
             <div id="filter-container">
-                <label for="movie-filter">Filter Movies:</label>
-                <select id="movie-filter">
-                    <option value="all">All Movies</option>
-                    <option value="exclude-watched">Exclude Watched</option>
-                    <option value="sort-title">Sort by Title</option>
-                    <option value="sort-runtime">Sort by Runtime</option>
-                    <option value="sort-year">Sort by Year</option>
-                </select>
+                <div class="checkbox">
+                    <label for="exclude-watched-movies">Show Watched Movies</label>
+                    <input type="checkbox" id="exclude-watched-movies" name="exclude watched movies" value="newsletter">
+                </div>                    
+                <div class="dropdown">
+                    <label for="movie-filter">Sort Movies:</label>
+                    <select id="movie-filter">
+                        <option value="title">Sort by Title</option>
+                        <option value="runtime">Sort by Runtime</option>
+                        <option value="year">Sort by Year</option>
+                    </select>
+                </div>
             </div>
             <div id="movies-grid" class="movies-grid"></div>
         </main>
