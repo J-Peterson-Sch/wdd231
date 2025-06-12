@@ -22,7 +22,7 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/footer.js" defer></script>
-    <script src="scripts/get-movie-info.js" defer></script>
+    <script type="module" src="scripts/get-movie-info.js" defer></script>
   </head>
 
     <body>
@@ -47,6 +47,16 @@
         <main>
             <h1>Movies We're Planning on Watching</h1>
             <h2>Movies with a box around them are ones that we've already watched</h2>
+            <div id="filter-container">
+                <label for="movie-filter">Filter Movies:</label>
+                <select id="movie-filter">
+                    <option value="all">All Movies</option>
+                    <option value="exclude-watched">Exclude Watched</option>
+                    <option value="sort-title">Sort by Title</option>
+                    <option value="sort-runtime">Sort by Runtime</option>
+                    <option value="sort-year">Sort by Year</option>
+                </select>
+            </div>
             <div id="movies-grid" class="movies-grid"></div>
         </main>
 
