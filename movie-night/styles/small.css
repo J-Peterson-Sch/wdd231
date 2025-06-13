@@ -55,24 +55,6 @@ nav li {
   align-self: center;
 }
 
-#header-elantris {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  align-self: end;
-  padding-left: .5rem;
-  color: #fff;
-}
-
-#header-subtitle {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  font-size: .8rem;
-  align-self: start;
-  padding-left: .5rem;
-  color: #fff;
-  min-width: 100px;
-}
-
 #menu {
   font-size: 1.5rem;
   border: 0;
@@ -89,7 +71,6 @@ nav li {
   font-size: 2.5rem;
   max-width: 16px;
   max-height: 16px;
-  
 }
 
 #menu.open::before {
@@ -273,7 +254,6 @@ p {
   overflow: hidden;
 }
 
-
 /* ************************movie grid*************************** */
 
 #filter-container {
@@ -317,6 +297,9 @@ input[type="checkbox"] {
 .movie-card {
     /* max-width: 250px; */
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .movie-card h3 {
@@ -340,10 +323,10 @@ input[type="checkbox"] {
 
 .card-info {
   line-height: 1.8rem;
-  justify-self: end;
 }
 
 /* ************************form************************ */
+
 .form {
   max-width: 500px;
   margin: 0 auto 2rem auto;
