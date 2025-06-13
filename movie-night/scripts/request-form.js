@@ -22,8 +22,8 @@ document.getElementById("movie-request-form").addEventListener("submit", functio
 
     var name = encodeURIComponent(document.getElementById("name").value);
     var email = encodeURIComponent(document.getElementById("email").value);
-    var movieTitle = encodeURIComponent(document.getElementById("movieTitle").value);
-    var movieYear = encodeURIComponent(document.getElementById("movieYear").value);
+    var movieTitle = encodeURIComponent(document.getElementById("movie-title").value);
+    var movieYear = encodeURIComponent(document.getElementById("movie-year").value);
     var imdbId = encodeURIComponent(document.getElementById("imdbId").value);
 
     // Construct URL with search parameters

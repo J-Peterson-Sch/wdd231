@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Night</title>
-    <meta name="description" content="Welcome page for Movie Night.">
+    <title>Movies We're Planning on Watching</title>
+    <meta name="description" content="Movies We're Planning on Watching">
     <meta name="author" content="Jordan Peterson">
     
     <meta property="og:title" content="Movie Night">
-    <meta property="og:description" content="Welcome page for Movie Night.">
-    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/movie-night/index.html">
-    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/movie-night/images/<to add later>.webp">
+    <meta property="og:description" content="Movies We're Planning on Watching">
+    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/movie-night/movies.html">
+    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/movie-night/images/hero.webp">
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -22,7 +22,7 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/footer.js" defer></script>
-    <script type="module" src="scripts/get-movie-info.js" defer></script>
+    <script type="module" src="scripts/get-movie-info.js"></script>
   </head>
 
     <body>
@@ -48,11 +48,11 @@
             <h1>Movies We're Planning on Watching</h1>
             <h2>Movies with a box around them are ones that we've already watched</h2>
             <div id="filter-container">
-                <div class="checkbox">
-                    <label for="exclude-watched-movies">Show Watched Movies</label>
+                <div class="option">
+                    <label for="show-watched-movies">Show Watched Movies</label>
                     <input type="checkbox" id="exclude-watched-movies" name="exclude watched movies" value="newsletter">
                 </div>                    
-                <div class="dropdown">
+                <div class="option">
                     <label for="movie-filter">Sort Movies:</label>
                     <select id="movie-filter">
                         <option value="title">Sort by Title</option>

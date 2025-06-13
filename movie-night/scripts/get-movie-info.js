@@ -5,7 +5,7 @@ import { filter, sort } from "./filters.mjs";
 // const MOVIE_IDS = ["tt0111161", "tt0068646", "tt0071562"];
 const API_KEY = 'f6a4ead9';
 const CACHE_KEY = 'cachedMovies';
-const ewmCheckbox = document.getElementById('exclude-watched-movies');
+const swmCheckbox = document.getElementById('exclude-watched-movies');
 const sortSelect = document.getElementById('movie-filter');
 
 async function loadMovieIDs() {
@@ -76,12 +76,13 @@ async function displayMovies() {
         const movieIDs = await loadMovieIDs();
         let movies = await getMoviesData(movieIDs);
 
-        // Filter out the watched moves
-        movies = filter(movies,watchedMovies);
+        // Filter out the watched moves if checkbox is unchecked
+        if (!swmCheckbox.checked) {
+            movies = filter(movies,'excludeWatchedMovies',watchedMovies);
+        }
 
-        // Sort the movies alphabetically by the Title
-        sort(movies);
-        // movies.sort((a, b) => a.Title.localeCompare(b.Title));
+        // Sort the movies       
+        sort(movies, sortSelect.value);
 
         const grid = document.getElementById('movies-grid');
         grid.innerHTML = ''; // Clear existing movies
@@ -96,5 +97,13 @@ async function displayMovies() {
         console.error("An error occurred while displaying movies:", error);
     }
 }
+
+sortSelect.addEventListener('change', (event) => {
+    displayMovies();
+});
+
+swmCheckbox.addEventListener('change', (event) => {
+    displayMovies();
+});
 
 displayMovies();

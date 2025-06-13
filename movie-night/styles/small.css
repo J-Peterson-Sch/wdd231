@@ -192,12 +192,27 @@ h1, h2, h3 {
 h1 {
   text-align: center;
   height: 3rem;
-  margin: 2rem auto;
+  margin: 2rem auto 4rem auto;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.7rem;
+  overflow-wrap: break-word;  /* Handle overflow by wrapping long words */
+  word-break: break-word;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: var(--accents-color);
+}
+
+.wide-bottom {
+  margin-bottom: 6rem;
 }
 
 #hero {
@@ -213,6 +228,7 @@ h2 {
 
 #homepage-content {
   width: 90vw;
+  max-width: 1000px;
   margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
@@ -259,6 +275,28 @@ h2 {
 
 
 /* ************************movie grid*************************** */
+
+#filter-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  color: var(--accents-color);
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;       /* Customize the width */
+    height: 20px;      /* Customize the height */
+    margin: 8px;
+}
 
 #movies-grid {
   margin-top: 1rem;

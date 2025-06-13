@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Night</title>
-    <meta name="description" content="Welcome page for Movie Night.">
+    <title>Request a Movie</title>
+    <meta name="description" content="Request a Movie">
     <meta name="author" content="Jordan Peterson">
     
     <meta property="og:title" content="Movie Night">
-    <meta property="og:description" content="Welcome page for Movie Night.">
-    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/movie-night/index.html">
-    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/movie-night/images/<to add later>.webp">
+    <meta property="og:description" content="Request a movie be added to our watch list">
+    <meta property="og:url" content="https://j-peterson-sch.github.io/wdd231/movie-night/request.html">
+    <meta property="og:image" content="https://j-peterson-sch.github.io/wdd231/movie-night/images/hero.webp">
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
-    <script src="scripts/index.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/request-form.js" defer></script>
     <script src="scripts/footer.js" defer></script>
@@ -49,7 +48,7 @@
             <h2>Do you have a movie that you'd like to add to our list?</h2>
             
             <div class="form">
-                <form id="movie-request-form">
+                <form id="movie-request-form" method="get" action="thankyou.html">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -60,7 +59,7 @@
                     <input type="text" id="movie-title" name="movieTitle">
 
                     <label for="movie-year">Year:</label>
-                    <input type="text" id="movieYear" name="movieYear">
+                    <input type="text" id="movie-year" name="movieYear">
 
                     <span>OR</span>
 
