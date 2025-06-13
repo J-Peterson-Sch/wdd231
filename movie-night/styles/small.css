@@ -273,9 +273,9 @@ p {
 }
 
 input[type="checkbox"] {
-    width: 20px;       /* Customize the width */
-    height: 20px;      /* Customize the height */
-    margin: 8px;
+  width: 20px;       /* Customize the width */
+  height: 20px;      /* Customize the height */
+  margin: 8px;
 }
 
 #movies-grid {
@@ -283,43 +283,50 @@ input[type="checkbox"] {
 }
 
 .watched {
-    border: 2px solid var(--accents-color);
-    overflow: hidden;
+  border: 2px solid var(--accents-color);
+  overflow: hidden;
 }
 
 .movies-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
 }
 
 .movie-card {
-    /* max-width: 250px; */
-    padding: 5px;
-    display: grid;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    align-items: start;
-    justify-items: start;
+  /* max-width: 250px; */
+  padding: 5px;
+  display: grid;
+  grid-template-rows: auto 140px;
+  align-items: start;
+  justify-items: start;
+  overflow: hidden;
+}
+
+.card-info {
+  display: grid;
+  grid-template-rows: auto auto auto;
 }
 
 .movie-card h3 {
-    padding: .8rem 0;
-    max-width: 250px;
-    text-align: center;
-    font-weight: 800;
+  padding: .8rem 0;
+  max-width: 250px;
+  font-weight: 800;
 }
 
 .movie-card img{
-    max-width: 250px;
-    display: block;
-    margin: 0 auto;
+  width: 250px;
+  height: 370px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .movie-card a {
-    font-size: 2rem;
-    color: var(--text-color);
-    text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .card-info {
