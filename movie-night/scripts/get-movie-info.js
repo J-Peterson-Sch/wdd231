@@ -5,7 +5,7 @@ import { filter, sort } from "./filters.mjs";
 // const MOVIE_IDS = ["tt0111161", "tt0068646", "tt0071562"];
 const API_KEY = 'f6a4ead9';
 const CACHE_KEY = 'cachedMovies';
-const swmCheckbox = document.getElementById('exclude-watched-movies');
+const swmCheckbox = document.getElementById('show-watched-movies');
 const sortSelect = document.getElementById('movie-filter');
 
 async function loadMovieIDs() {

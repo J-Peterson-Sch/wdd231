@@ -188,7 +188,8 @@ p {
 }
 
 .bold-text {
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 1.2rem;
   color: var(--accents-color);
 }
 
@@ -348,6 +349,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 input[type="text"],
