@@ -449,6 +449,19 @@ footer section {
   margin: 0 1rem;
 }
 
+.video-link {
+  color: var(--background-color);
+  font-weight: bold;
+  padding: .5rem;
+  border-radius: 15px;
+  background-color: var(--links-color);
+  text-decoration: none;
+}
+
+.video-link:visited {
+  color: black;
+}
+
 footer p {
   padding: 0;
   margin: 0;
